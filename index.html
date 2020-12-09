@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -13,5 +14,59 @@
 
     <title>trillo &mdash; Your all-in-one booking app</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <!-- LOGO -->
+        <a href="#"
+          ><img src="img/logo.png" alt="Logo Trillo" class="logo"
+        /></a>
+        <!-- SEARCH BAR -->
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+        <!-- USER NAV -->
+        <nav class="user-nav">
+          <a href="#">
+            <div class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+              </svg>
+              <span class="user-nav__notification">7</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-chat"></use>
+              </svg>
+              <span class="user-nav__notification">12</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="user-nav__user">
+              <img src="img/user.jpg" alt="User" class="user-nav__user-photo" />
+              <span class="user-nav__user-name">Jorge</span>
+            </div>
+          </a>
+        </nav>
+      </header>
+      <section class="content">
+        <!-- NAVIGATION MENU -->
+        <nav class="sidebar">Navigation</nav>
+        <!-- MAIN CONTENT -->
+        <main class="hotel-view">Main</main>
+      </section>
+    </div>
+  </body>
 </html>

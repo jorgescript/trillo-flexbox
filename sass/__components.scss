@@ -1,0 +1,122 @@
+////////////////////////////////////////////
+/// LOGO
+.logo {
+  height: 3.24rem;
+  margin-left: 2rem;
+}
+
+////////////////////////////////////////////
+/// SEARCH
+.search {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 40%;
+  &__input {
+    width: 90%;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    transition: all 0.2s;
+    margin-right: -3.5rem;
+    background-color: var(--grey-light-2);
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--grey-dark-3); // Cambia el color del svg
+  }
+}
+
+////////////////////////////////////////////
+/// USER NAVIGATION
+.user-nav {
+  align-self: stretch;
+
+  display: flex;
+  align-items: center;
+
+  & > * {
+    height: 100%;
+    padding: 0 2rem;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+  }
+
+  & > *:hover {
+    text-decoration: none;
+    background-color: var(--grey-light-2);
+  }
+
+  &__icon-box {
+    position: relative;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--grey-dark-2);
+  }
+
+  &__notification {
+    top: -0.5rem;
+    right: -0.5rem;
+    position: absolute;
+
+    width: 1.55rem;
+    height: 1.55rem;
+    color: #ffffff;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__user-name {
+    color: var(--grey-dark-2);
+  }
+}
