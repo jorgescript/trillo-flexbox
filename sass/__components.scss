@@ -120,3 +120,73 @@
     color: var(--grey-dark-2);
   }
 }
+
+////////////////////////////////////////////
+/// SIDE NAVIGATION
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 0.3rem;
+      transform: scaleY(0);
+      background-color: var(--primary);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover::before,
+    &--active::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &:active::before {
+      background-color: var(--primary-light);
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    z-index: 100;
+    position: relative;
+
+    display: block;
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--grey-light-1);
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    margin-right: 2rem;
+  }
+}
+
+////////////////////////////////////////////
+/// LEGAL
+.legal {
+  padding: 2.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--grey-light-4);
+}
